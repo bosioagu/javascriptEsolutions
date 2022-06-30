@@ -1,0 +1,74 @@
+REQUISITOS
+-Hacer conversion explicita
+
+-Usar estructuras mas adecuadas para lo solicitado. (por ejemplo elegir cuando usar for, for in, for on o for Each)
+
+-Realizar buena documentación. No abusar. Por lo menos al inicio de una funcion poner breve descripcion de cual es la estrategia que usa esa funcion apra resolver algun problema, pero si es muy obvio no tiene sentido documentar (por ejemplo que un forEach recorre un array PERO si, "se utiliza la libreria tal para resolver tal o cual situación" DEBE SER breve)
+/**
+
+*/
+
+- Usar detector de eventos.  No modificar HTML, sino usar controlador de Eventos. addEventListener
+
+--------------------------
+JS Hace Coercion de tipos... (lo deduce solo)
+
+Pero Aprendimos a hacer una conversion explicita de tipos que es mejor. Esto nos proporciona seguridad. Ya que los tipos estan explicitamente manejados.
+Proporciona Seguridad. ES UN REQUISITO para el TP
+Vamos a hacer conversion explicita en general
+
+Estudiamos por nuestra cuenta, estructuras de control de flujo.
+
+Repasamos la importancia de una buena documentación. 
+
+Detectores de eventos
+
+Utiizamos archivos JSON por ejemplo:
+
+{
+    "first_prop" : "Una cadena de texto",
+    "second_prop" : 125.30,
+    "third_prop" : [
+        {
+            "sub_prop_1" : "Descripción - 1",
+            "sub_prop_2" : 200
+        },
+        {
+            "sub_prop_1" : "Descripción - 2",
+            "sub_prop_2" : 100
+        }
+    ],
+    "forth_prop" : true,
+    "fifth_prop" : null
+}
+
+Aprendimos a parsear el JSON con el metodo parse() de JSON.
+
+JSON.parse(json); -> devuelve un OBJETO JS
+
+
+QUIERO
+
+Crear una pagina HTML que permita "pegar" (como en eslint) el JSON de arriba, y un botón que se va a llamar "CONVERTIR" El boton llama a una funcion que recibe el JSON que tengo en la caja de texto (como string) y va a devolver (por consola) un objeto JS. O sea, por consola, luego de presionar el boton CONVERTIR podre acceder a cada elemento del objeto medainte la notación "." o escribiendo la clave de la propiedad entre corchetes.
+
+Aprendimos a crear un objetivo vacio y agregar propiedades a ese objeto por codigo.
+
+En la consola podemos poner Que se creo correctamente el objeto json
+
+La FUNCION DEBE hacer la conversion de forma manual (no puedo usar el metodo parse, de JSON).
+
+REQUISITO Usar exactamente el JSON dado.
+
+EL OBJETO JS se llamara json (const json ={} y luego ir agregando los atreibutos del parseo que estamos haciendo)
+
+La vista poco interesa
+
+REQUISITO (OPCIONAL): La conversión de {} que sea recursiva. 
+
+REQUISITO: 2 archivos  1 HTML y 1 js.
+
+index.HTML
+    js/parse.js
+
+Si hacemos validacion de tipo, hacerla aparte no dentro de la funcion de parseo
+
